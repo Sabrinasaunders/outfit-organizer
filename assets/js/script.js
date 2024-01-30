@@ -24,17 +24,20 @@ var id;
 var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
 
 const successCallback = (position) => {
-  fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude +'&lon=' + position.coords.longitude +'&appid='+weatherAPIKey)
+  fetch('https://api.openweathermap.org/data/2.5/weather?units=imperial&lat=' + position.coords.latitude +'&lon=' + position.coords.longitude +'&appid='+weatherAPIKey)
   .then(function(response) {
     return response.json();
   })
   .then(function(data) {
     console.log(data);
+    console.log('temperature at current location: ', data.main.temp);
+    console.log('weather conditions: ', data.weather[0].description);
   });
 };
 
 const errorCallback = (error) => {
-  console.log(error);
+  console.log('access to location denied', error);
 };
 
+// gets current location of client and calls the weather API if client allows access
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
