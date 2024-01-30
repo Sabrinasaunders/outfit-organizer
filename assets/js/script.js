@@ -24,9 +24,6 @@ var id;
 var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
 
 const successCallback = (position) => {
-  console.log(position);
-  console.log(position.coords);
-
   fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude +'&lon=' + position.coords.longitude +'&appid='+weatherAPIKey)
   .then(function(response) {
     return response.json();
