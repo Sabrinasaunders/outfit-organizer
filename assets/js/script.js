@@ -20,10 +20,19 @@ console.log(http)
 console.log(palette);
 
 // Weather API
-const id = navigator.geolocation.watchPosition(successCallback, errorCallback);
+var id;
 var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
+const successCallback = (position) => {
+  console.log(position);
+  id = position;
+};
 
-fetch('https://api.openweathermap.org/data/2.5/weather?lat='+id.latitude+'&lon='+id.longitude+'&appid='+weatherAPIKey)
+const errorCallback = (error) => {
+  console.log(error);
+};
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + id['latitude'] +'&lon=' + id['longitude'] +'&appid='+weatherAPIKey)
 .then(function(response) {
   return response.json();
 })
