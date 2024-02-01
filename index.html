@@ -1,85 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UFT-8" />
-        <title>Outfit Organizer</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
-    </head>
+  <head>
+    <meta charset="UFT-8" />
+    <title>Outfit Organizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts: Josefin Sans & Josefin Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Josefin+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bulma framework CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
 
-    <body>
-        <header>
+  <body>
+    <header>
+      <!-- Bulma Nav -->
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
             <h1>Outfit Organizer</h1>
-            <p>Welcome to the Outfit Organizer! You're going to look so stylish today!</p>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#contact-form">Contact Form</a>
-                    </li>
-                        <a href="#wardrobe">Wardrobe</a>
-                    <li>
-                        <a href="#about-this-page">About This Page</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#wardrobe"> Wardrobe </a>
+            <p class="navbar-item">|</p>
+            <a class="navbar-item" href="#about"> About </a>
+            <p class="navbar-item">|</p>
+            <a class="navbar-item" href="#contact"> Contact </a>
+          </div>
+        </div>
+      </nav>
+      <section id="subHeader">
+        <p>You're going to look so stylish today!</p>
+      </section>
+    </header>
+    <main>
+      <!-- Hero/Banner Image -->
+      <section
+        class="section is-medium"
+        id="heroImg"
+        title="Background photo of clothing and accessories"
+      ></section>
+      <!-- Upload/Filter Bar -->
+      <section id="filterBar" class="navbar">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Add wardrobe items </a>
+              <div class="navbar-dropdown is-right">
+                <div class="navbar-item is-inactive">
+                  <p>Drop an image link below to add it to your wardrobe!</p>
+                </div>
+                <input
+                  class="navbar-item input is-rounded"
+                  type="text"
+                  placeholder="Paste link to image"
+                />
+                <div class="navbar-item">
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Headwear
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Top
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Bottom
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Footwear
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Sort wardrobe options </a>
+              <div class="navbar-dropdown is-right">
+                <section class="navbar-item">Placeholder Filter</section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="clothing-item-shirt">
+        <h2>Shirt selection</h2>
+        <div class="shirt-container">Image</div>
+      </section>
+      <section class="clothing-item-jacket">
+        <h2>Jacket selection</h2>
+        <div class="jacket-container">Image</div>
+      </section>
+      <section class="clothing-item-pants">
+        <h2>Pant selection</h2>
+        <div class="pants-container">Image</div>
+      </section>
+      <section class="clothing-item-shoes">
+        <h2>Shoes selection</h2>
+        <div class="shoes-container">Image</div>
+      </section>
 
-        <main>
-        <section class="clothing-item-shirt">
-            <h2>Shirt selection</h2>
-            <div class="shirt-container">Image</div>
-        </section>
-        <section class="clothing-item-jacket">
-            <h2>Jacket selection</h2>
-            <div class="jacket-container">Image</div>
-        </section>
-        <section class="clothing-item-pants">
-            <h2>Pant selection</h2>
-            <div class="pants-container">Image</div>
-        </section>
-        <section class="clothing-item-shoes">
-            <h2>Shoes selection</h2>
-            <div class="shoes-container">Image</div>
-        </section>
-
-        <section>
+      <section>
         <div class="weather-location" id="location-widget"></div>
         <div class="weather-temperature" id="temperature-widget"></div>
         <div class="weather-description" id="temperature-widget"></div>
         <div class="clothing-recommendation" id="hot-or-cold"></div>
-        </section>
-        <section>
-            <!--Aster section start-->
-        <input
-          class="input is-rounded"
-          type="text"
-          placeholder="Paste link to image"
-        />
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Headwear
-        </label>
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Top
-        </label>
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Bottom
-        </label>
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Footwear
-        </label>
-        <!--Aster section end-->
-     </section>
-
-        </main>
-        <aside></aside>
-        <script src="./assets/js/script.js"></script>
-    </body>
-    <footer>Keep calm and style on!</footer>
-
-   
+      </section>
+    </main>
+    <aside></aside>
+    <script src="./assets/js/script.js"></script>
+  </body>
+  <footer>Keep calm and style on!</footer>
 </html>
