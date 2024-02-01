@@ -22,21 +22,6 @@
 
   <body>
     <header>
-      <!-- <h1>Outfit Organizer</h1>
-      <p>
-        Welcome to the Outfit Organizer! You're going to look so stylish today!
-      </p>
-      <nav>
-        <ul>
-          <li>
-            <a href="#contact-form">Contact Form</a>
-          </li>
-          <a href="#wardrobe">Wardrobe</a>
-          <li>
-            <a href="#about-this-page">About This Page</a>
-          </li>
-        </ul>
-      </nav> -->
       <!-- Bulma Nav -->
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -65,6 +50,50 @@
         id="heroImg"
         title="Background photo of clothing and accessories"
       ></section>
+      <!-- Upload/Filter Bar -->
+      <section id="filterBar" class="navbar">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Add wardrobe items </a>
+              <div class="navbar-dropdown is-right">
+                <div class="navbar-item is-inactive">
+                  <p>Drop an image link below to add it to your wardrobe!</p>
+                </div>
+                <input
+                  class="navbar-item input is-rounded"
+                  type="text"
+                  placeholder="Paste link to image"
+                />
+                <div class="navbar-item">
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Headwear
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Top
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Bottom
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Footwear
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Sort wardrobe options </a>
+              <div class="navbar-dropdown is-right">
+                <section class="navbar-item">Placeholder Filter</section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="clothing-item-shirt">
         <h2>Shirt selection</h2>
         <div class="shirt-container">Image</div>
@@ -87,29 +116,6 @@
         <div class="weather-temperature" id="temperature-widget"></div>
         <div class="weather-description" id="temperature-widget"></div>
         <div class="clothing-recommendation" id="hot-or-cold"></div>
-      </section>
-      <section>
-        <input
-          class="input is-rounded"
-          type="text"
-          placeholder="Paste link to image"
-        />
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Headwear
-        </label>
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Top
-        </label>
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Bottom
-        </label>
-        <label class="radio">
-          <input type="radio" name="answer" />
-          Footwear
-        </label>
       </section>
     </main>
     <aside></aside>

@@ -6,7 +6,7 @@
   --darkPink: #964646;
   --darkMono: #000;
   --lightMono: #fff;
-  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* Universal Styles */
@@ -48,7 +48,7 @@
   background-color: var(--medPink);
   padding: 0.2rem;
   padding-left: 0.8rem;
-  box-shadow: 0 0px 10px var(--shadow);
+  box-shadow: 0 5px 10px var(--shadow);
 }
 
 /* Hero Image */
@@ -58,4 +58,14 @@
   background-size: cover;
   background-position: center;
   opacity: 0.7;
+}
+
+/* Filter Bar */
+
+#filterBar {
+  box-shadow: 0 -5px 10px var(--shadow);
+}
+
+.navbar * {
+  color: var(--darkPink);
 }
