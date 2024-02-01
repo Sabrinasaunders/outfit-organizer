@@ -1,1 +1,61 @@
+/* Var Declare */
 
+:root {
+  --lightPink: #f5d9d9;
+  --medPink: #e8c6c6;
+  --darkPink: #964646;
+  --darkMono: #000;
+  --lightMono: #fff;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Universal Styles */
+
+* {
+  font-family: "Josefin Sans", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: light;
+  color: var(--darkPink);
+}
+
+* h1 {
+  font-family: "Josefin Slab", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+* h2 {
+  font-family: "josefin Slab", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Navigation / Header */
+
+.navbar {
+  background-color: var(--lightPink);
+}
+
+.navbar-item {
+  color: var(--darkPink);
+}
+
+.navbar-menu p {
+  pointer-events: none;
+}
+
+#subHeader {
+  background-color: var(--medPink);
+  padding: 0.2rem;
+  padding-left: 0.8rem;
+  box-shadow: 0 0px 10px var(--shadow);
+}
+
+/* Hero Image */
+
+#heroImg {
+  background-image: url(/assets/images/clothes-pexels-lumn-322207.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
