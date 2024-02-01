@@ -20,6 +20,10 @@ console.log(http)
 console.log(palette);
 
 // Weather API
+var locationName = document.querySelector('.weather-location');
+var locationTemp = document.querySelector('.weather-temperature');
+var locationTempDescription = document.querySelector('.weather-description');
+
 var id;
 var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
 
@@ -30,8 +34,11 @@ const successCallback = (position) => {
   })
   .then(function(data) {
     console.log(data);
+    locationName.textContent = data.name;
     console.log('temperature at current location: ', data.main.temp);
+    locationTemp.textContent = Math.floor(data.main.temp) + '';
     console.log('weather conditions: ', data.weather[0].description);
+    locationTempDescription.textContent = data.weather[0].description;
   });
 };
 
