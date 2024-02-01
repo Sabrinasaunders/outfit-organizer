@@ -36,7 +36,7 @@ const successCallback = (position) => {
     console.log(data);
     locationName.textContent = data.name;
     console.log('temperature at current location: ', data.main.temp);
-    locationTemp.textContent = Math.floor(data.main.temp) + '';
+    locationTemp.textContent = Math.round(data.main.temp) + '';
     console.log('weather conditions: ', data.weather[0].description);
     locationTempDescription.textContent = data.weather[0].description;
   });
