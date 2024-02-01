@@ -41,3 +41,14 @@ const errorCallback = (error) => {
 
 // gets current location of client and calls the weather API if client allows access
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+// create an array for shirts, jackets, pants, and shoes
+var shirtImages = [];
+var jacketsImages = [];
+var pantsImages = [];
+var shoesImages = [];
+var currentShirt;
+
+// TODO: get user input for an image link and copy it into the array
+
+// TODO: create 
