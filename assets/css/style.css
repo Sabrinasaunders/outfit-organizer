@@ -69,3 +69,12 @@
 .navbar * {
   color: var(--darkPink);
 }
+
+/* Footer */
+
+.footer {
+  background-color: var(--medPink);
+}
+.footer * {
+  color: var(--lightMono);
+}
