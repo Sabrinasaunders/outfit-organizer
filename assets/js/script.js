@@ -60,6 +60,31 @@ var currentPants=0;
 var currentShoes=0;
 
 // TODO: get user input for an image link and copy it into the array
+var inputTest;
+var testButton;
+
+function addImage() {
+  if(inputTest == null) {
+    return;
+  }
+  // use a radio to determine which category the link is for
+  // push the link into the correct array
+
+  switch(linkCategory) {
+    case 'shirts':
+      shirtsImages.push(inputTest);
+      return;
+    case 'jackets':
+      jacketsImages.push(inputTest);
+      return;
+    case 'pants':
+      pantsImages.push(inputTest);
+      return;
+    case 'shoes':
+      shoesImages.push(inputTest);
+      return;    
+  }
+}
 
 // TODO: create event handler to take input for certain things and push it into the proper array
-
+// testButton.onClick = addImage;
