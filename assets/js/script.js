@@ -71,7 +71,9 @@ function addImage() {
   // use a radio to determine which category the link is for
   // push the link into the correct array
   var linkCategory = document.querySelector('input[name="answer"]:checked').value;
-  console.log('linkCategory ' ,linkCategory)
+  console.log('linkCategory ' ,linkCategory);
+  console.log('linkCategory.id ' ,linkCategory.id);
+  console.log('linkCategory.inner ' ,linkCategory.innerHTML);
   switch(linkCategory) {
     case 'shirts':
       console.log('shirts');
