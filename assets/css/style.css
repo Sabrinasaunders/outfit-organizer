@@ -54,7 +54,7 @@
 /* Hero Image */
 
 #heroImg {
-  background-image: url("/assets/images/clothes-pexels-lumn-322207.jpg");
+  background-image: url("../images/clothes-pexels-lumn-322207.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.7;
