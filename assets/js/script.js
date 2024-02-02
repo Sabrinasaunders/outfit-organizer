@@ -58,8 +58,6 @@ var currentJacket=0;
 var currentPants=0;
 var currentShoes=0;
 
-// TODO: get user input for an image link and copy it into the array
-
 var linkButton = document.querySelector('#linkBtn');
 
 function addImage() {
@@ -67,8 +65,7 @@ function addImage() {
   if(imageUrl == '') {
     return;
   }
-  // use a radio to determine which category the link is for
-  // push the link into the correct array
+  // TODO: clear the text input after button is clicked
   if(document.getElementById('jackets').checked) {
     jacketsImages.push(imageUrl);
     imageUrl = '';
@@ -87,34 +84,6 @@ function addImage() {
     console.log('shoes', shoesImages);
   }
 
-  // var linkCategory = document.querySelector();
-  // console.log('linkCategory ' ,linkCategory);
-  // console.log('linkCategory.id ' ,linkCategory.id);
-  // console.log('linkCategory.inner ' ,linkCategory.innerHTML);
-  // switch(linkCategory) {
-  //   case 'shirts':
-  //     console.log('shirts');
-  //     shirtsImages.push(imageUrl);
-  //     imageUrl.textContent = '';
-  //     return;
-  //   case 'jackets':
-  //     console.log('jackets');
-  //     jacketsImages.push(imageUrl);
-  //     imageUrl.textContent = '';
-  //     return;
-  //   case 'pants':
-  //     console.log('pants');
-  //     pantsImages.push(imageUrl);
-  //     imageUrl.textContent = '';
-  //     return;
-  //   case 'shoes':
-  //     console.log('shoes');
-  //     shoesImages.push(imageUrl);
-  //     imageUrl.textContent = '';
-  //     return;    
-  // }
 }
-
-// TODO: create event handler to take input for certain things and push it into the proper array
 
 linkButton.addEventListener('click', addImage);
