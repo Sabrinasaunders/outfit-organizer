@@ -1,1 +1,124 @@
+/* Var Declare */
 
+:root {
+  --lightPink: #f5d9d9;
+  --medPink: #e8c6c6;
+  --darkPink: #964646;
+  --darkMono: #000;
+  --lightMono: #fff;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Universal Styles */
+
+* {
+  font-family: "Josefin Sans", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: light;
+  color: var(--darkPink);
+}
+
+* h1 {
+  font-family: "Josefin Slab", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+* h2 {
+  font-family: "josefin Slab", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Navigation / Header */
+
+.navbar {
+  background-color: var(--lightPink);
+}
+
+.navbar-item {
+  color: var(--darkPink);
+}
+
+.navbar-menu p {
+  pointer-events: none;
+}
+
+#subHeader {
+  background-color: var(--medPink);
+  padding: 0.2rem;
+  padding-left: 0.8rem;
+  box-shadow: 0 5px 10px var(--shadow);
+}
+
+/* Hero Image */
+
+#heroImg {
+  background-image: url("../images/clothes-pexels-lumn-322207.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Filter Bar */
+
+#filterBar {
+  box-shadow: 0 -5px 10px var(--shadow);
+}
+
+.navbar * {
+  color: var(--darkPink);
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#content {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* When the sidebar is open, make it visible and move the main content to the right */
+.sidebar.open {
+  width: 250px;
+}
+
+#content.open {
+  margin-left: 250px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--medPink);
+}
+
+.footer * {
+  color: var(--lightMono);
+}
+
+#vertLine {
+  background-color: var(--lightMono);
+  width: 3px;
+}

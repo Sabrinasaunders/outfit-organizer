@@ -1,60 +1,221 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UFT-8" />
-        <title>Outfit Orginizer</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
+  <head>
+    <meta charset="UFT-8" />
+    <title>Outfit Organizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts: Josefin Sans & Josefin Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Josefin+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bulma framework CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <!-- Favicon Link -->
+    <link
+      rel="icon"
+      href="./assets/images/outfit-organizer-favicon.png"
+      type="image/x-icon"
+    />
+  </head>
 
-    <body>
-        <header>
+  <body>
+    <header>
+      <!-- Bulma Nav -->
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
             <h1>Outfit Organizer</h1>
-            <p>Welcome to the Outfit Organizer! You're going to look so stylish today!</p>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#contact-form">Contact Form</a>
-                    </li>
-                        <a href="#wardrobe">Wardrobe</a>
-                    <li>
-                        <a href="#about-this-page">About This Page</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-        <section class="clothing-item-shirt">
-            <h2>Shirt selection</h2>
-            <div class="shirt-container">Image</div>
-        </section>
-        <section class="clothing-item-jacket">
-            <h2>Jacket selection</h2>
-            <div class="jacket-container">Image</div>
-        </section>
-        <section class="clothing-item-pants">
-            <h2>Pant selection</h2>
-            <div class="pants-container">Image</div>
-        </section>
-        <section class="clothing-item-shoes">
-            <h2>Shoes selection</h2>
-            <div class="shoes-container">Image</div>
-        </section>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#wardrobe"> Wardrobe </a>
+            <p class="navbar-item">|</p>
+            <a class="navbar-item" href="#about"> About </a>
+            <p class="navbar-item">|</p>
+            <a class="navbar-item" href="#contact"> Contact </a>
+          </div>
+        </div>
+      </nav>
+      <section id="subHeader">
+        <p>You're going to look so stylish today!</p>
+      </section>
+    </header>
+    <main>
+      <!-- Hero/Banner Image -->
+      <section
+        class="section is-medium"
+        id="heroImg"
+        title="Background photo of clothing and accessories"
+      ></section>
+      <!-- Upload/Filter Bar -->
+      <section id="filterBar" class="navbar">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Add wardrobe items </a>
+              <div class="navbar-dropdown is-right">
+                <div class="navbar-item is-inactive">
+                  <p>Drop an image link below to add it to your wardrobe!</p>
+                </div>
+                <input
+                  class="navbar-item input is-rounded"
+                  type="text"
+                  placeholder="Paste link to image"
+                />
+                <div class="navbar-item">
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Headwear
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Top
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Bottom
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="answer" />
+                    Footwear
+                  </label>
+                </div>
+                <div class="navbar-item">
+                  <button class="button">Add Item</button>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Sort wardrobe options </a>
+              <div class="navbar-dropdown is-right">
+                <section class="navbar-item">Placeholder Filter</section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="clothing-item-shirt">
+        <h2>Shirt selection</h2>
+        <div class="shirt-container">Image</div>
+      </section>
+      <section class="clothing-item-jacket">
+        <h2>Jacket selection</h2>
+        <div class="jacket-container">Image</div>
+      </section>
+      <section class="clothing-item-pants">
+        <h2>Pant selection</h2>
+        <div class="pants-container">Image</div>
+      </section>
+      <section class="clothing-item-shoes">
+        <h2>Shoes selection</h2>
+        <div class="shoes-container">Image</div>
+      </section>
 
-        <section>
+      <section>
         <div class="weather-location" id="location-widget"></div>
         <div class="weather-temperature" id="temperature-widget"></div>
         <div class="weather-description" id="temperature-widget"></div>
         <div class="clothing-recommendation" id="hot-or-cold"></div>
-        </section>
-        
-
-        </main>
-        <aside></aside>
-        <script src="./assets/js/script.js"></script>
-    </body>
-    <footer>Keep calm and style on!</footer>
-
-   
+      </section>
+    </main>
+    <!--Creating the side tab-->
+        <aside class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()">×</a>
+            <p class="menu-label">
+              Color Generator
+            </p>
+            <p>Pick a palette</p>
+            
+            </ul>
+            <p class="menu-label">
+             Click to generate by:
+            </p>
+            <ul class="menu-list">
+              <li><a>Clothing Item</a></li>
+              <li><a>Season</a></li>
+              <li><a>Random!</a></li>
+              </ul>
+              <p class="menu-color-palette">
+                Your palette:
+              </p>
+              <!--Add Colormind API-->
+              <a class="is-active">Powered by Colormind</a>
+              <div id="side-content">
+                <button class="side-openbtn" onclick="showSidebar()">☰</button>
+                <h2>Collapsed Sidebar</h2>
+                <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
+                More content here -->
+               </div>
+    </aside>
+    
+    <script src="./assets/js/script.js"></script>
+  </body>
+  <!-- Bulma Footer -->
+  <footer class="footer level">
+    <div class="level-left">
+      <div class="level-item">
+        <div class="content has-text-left">
+          <p style="font-weight: bold">Project created Jan - Feb 2024 by</p>
+          <p>
+            <span><a href="https://github.com/AaronH-o">Aaron H.</a></span> |
+            <span><a href="https://github.com/Aoliva96">Aster O.</a></span>
+          </p>
+          <p>
+            <span><a href="#">Elizabeth L.</a></span> |
+            <span
+              ><a href="https://github.com/Sabrinasaunders">Sabrina S.</a></span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="level-center">
+      <div class="level-item">
+        <div id="vertLine" class="content has-text-center is-unselectable">
+          <p>|</p>
+          <p>|</p>
+          <p>|</p>
+          <p>|</p>
+        </div>
+      </div>
+    </div>
+    <div class="level-right">
+      <div class="level-item">
+        <div class="content has-text-right">
+          <p style="font-weight: bold">
+            Styled with
+            <span class="footLink"
+              ><a href="https://bulma.io/">Bulma.io</a></span
+            >
+          </p>
+          <p>
+            <span class="footLink"
+              ><a href="https://github.com/Sabrinasaunders/outfit-organizer"
+                >Source code</a
+              ></span
+            >
+            utilizes the standard MIT license
+          </p>
+          <p>
+            Powered by
+            <span><a href="http://colormind.io/">Colormind.io</a></span>
+            &
+            <span
+              ><a href="https://openweathermap.org/api">OpenWeather</a></span
+            >
+            API's
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>

@@ -10,14 +10,13 @@ var palette = {};
 http.onreadystatechange = function() {
 	if(http.readyState == 4 && http.status == 200) {
 		palette = JSON.parse(http.responseText).result;
-    
+    console.log(palette);
 	}
 }
 
 http.open("POST", url, true);
 http.send(JSON.stringify(data));
 console.log(http)
-console.log(palette);
 
 // Weather API
 var locationName = document.querySelector('.weather-location');
