@@ -61,26 +61,26 @@ var currentShoes=0;
 var linkButton = document.querySelector('#linkBtn');
 
 function addImage() {
-  var imageUrl = document.querySelector('#url-input').value.trim();
-  if(imageUrl == '') {
+  var imageUrl = document.querySelector('#url-input').value;
+  if(imageUrl.trim() == '') {
     return;
   }
-  // TODO: clear the text input after button is clicked
+  // pushes the url into the correct array and clears the input
   if(document.getElementById('jackets').checked) {
-    jacketsImages.push(imageUrl);
-    imageUrl = '';
+    jacketsImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
     console.log('jackets', jacketsImages);
   } else if(document.getElementById('shirts').checked) {
-    shirtsImages.push(imageUrl);
-    imageUrl = '';
+    shirtsImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
     console.log('shirts', shirtsImages);
   } else if(document.getElementById('pants').checked) {
-    pantsImages.push(imageUrl);
-    imageUrl = '';
+    pantsImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
     console.log('pants', pantsImages);
   } else if(document.getElementById('shoes').checked) {
-    shoesImages.push(imageUrl);
-    imageUrl = '';
+    shoesImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
     console.log('shoes', shoesImages);
   }
 
