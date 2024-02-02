@@ -64,12 +64,14 @@ var linkButton = document.querySelector('#linkBtn');
 
 function addImage() {
   var imageUrl = document.querySelector('#url-input');
+  console.log('clicked');
   if(imageUrl == null) {
     return;
   }
   // use a radio to determine which category the link is for
   // push the link into the correct array
   var linkCategory = document.querySelector('input[name="answer"]:checked').value;
+  console.log('linkCategory ' ,linkCategory)
   switch(linkCategory) {
     case 'shirts':
       console.log('shirts');
@@ -91,4 +93,5 @@ function addImage() {
 }
 
 // TODO: create event handler to take input for certain things and push it into the proper array
-linkButton.onClick = addImage;
+
+linkButton.addEventListener('click', addImage);
