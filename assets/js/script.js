@@ -63,35 +63,56 @@ var currentShoes=0;
 var linkButton = document.querySelector('#linkBtn');
 
 function addImage() {
-  var imageUrl = document.querySelector('#url-input');
-  console.log('clicked');
-  if(imageUrl == null) {
+  var imageUrl = document.querySelector('#url-input').value.trim();
+  if(imageUrl == '') {
     return;
   }
   // use a radio to determine which category the link is for
   // push the link into the correct array
-  var linkCategory = document.querySelector('input[name="answer"]:checked').value;
-  console.log('linkCategory ' ,linkCategory);
-  console.log('linkCategory.id ' ,linkCategory.id);
-  console.log('linkCategory.inner ' ,linkCategory.innerHTML);
-  switch(linkCategory) {
-    case 'shirts':
-      console.log('shirts');
-      shirtsImages.push(imageUrl);
-      return;
-    case 'jackets':
-      console.log('jackets');
-      jacketsImages.push(imageUrl);
-      return;
-    case 'pants':
-      console.log('pants');
-      pantsImages.push(imageUrl);
-      return;
-    case 'shoes':
-      console.log('shoes');
-      shoesImages.push(imageUrl);
-      return;    
+  if(document.getElementById('jackets').checked) {
+    jacketsImages.push(imageUrl);
+    imageUrl = '';
+    console.log('jackets', jacketsImages);
+  } else if(document.getElementById('shirts').checked) {
+    shirtsImages.push(imageUrl);
+    imageUrl = '';
+    console.log('shirts', shirtsImages);
+  } else if(document.getElementById('pants').checked) {
+    pantsImages.push(imageUrl);
+    imageUrl = '';
+    console.log('pants', pantsImages);
+  } else if(document.getElementById('shoes').checked) {
+    shoesImages.push(imageUrl);
+    imageUrl = '';
+    console.log('shoes', shoesImages);
   }
+
+  // var linkCategory = document.querySelector();
+  // console.log('linkCategory ' ,linkCategory);
+  // console.log('linkCategory.id ' ,linkCategory.id);
+  // console.log('linkCategory.inner ' ,linkCategory.innerHTML);
+  // switch(linkCategory) {
+  //   case 'shirts':
+  //     console.log('shirts');
+  //     shirtsImages.push(imageUrl);
+  //     imageUrl.textContent = '';
+  //     return;
+  //   case 'jackets':
+  //     console.log('jackets');
+  //     jacketsImages.push(imageUrl);
+  //     imageUrl.textContent = '';
+  //     return;
+  //   case 'pants':
+  //     console.log('pants');
+  //     pantsImages.push(imageUrl);
+  //     imageUrl.textContent = '';
+  //     return;
+  //   case 'shoes':
+  //     console.log('shoes');
+  //     shoesImages.push(imageUrl);
+  //     imageUrl.textContent = '';
+  //     return;    
+  // }
 }
 
 // TODO: create event handler to take input for certain things and push it into the proper array
