@@ -75,6 +75,12 @@
 .footer {
   background-color: var(--medPink);
 }
+
 .footer * {
   color: var(--lightMono);
+}
+
+#vertLine {
+  background-color: var(--lightMono);
+  width: 3px;
 }
