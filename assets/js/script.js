@@ -59,31 +59,36 @@ var currentPants=0;
 var currentShoes=0;
 
 // TODO: get user input for an image link and copy it into the array
-var inputTest;
-var testButton;
+
+var linkButton = document.querySelector('#linkBtn');
 
 function addImage() {
-  if(inputTest == null) {
+  var imageUrl = document.querySelector('#url-input');
+  if(imageUrl == null) {
     return;
   }
   // use a radio to determine which category the link is for
   // push the link into the correct array
-
+  var linkCategory = document.querySelector('input[name="answer"]:checked').value;
   switch(linkCategory) {
     case 'shirts':
-      shirtsImages.push(inputTest);
+      console.log('shirts');
+      shirtsImages.push(imageUrl);
       return;
     case 'jackets':
-      jacketsImages.push(inputTest);
+      console.log('jackets');
+      jacketsImages.push(imageUrl);
       return;
     case 'pants':
-      pantsImages.push(inputTest);
+      console.log('pants');
+      pantsImages.push(imageUrl);
       return;
     case 'shoes':
-      shoesImages.push(inputTest);
+      console.log('shoes');
+      shoesImages.push(imageUrl);
       return;    
   }
 }
 
 // TODO: create event handler to take input for certain things and push it into the proper array
-// testButton.onClick = addImage;
+linkButton.onClick = addImage;
