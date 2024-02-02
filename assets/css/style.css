@@ -69,7 +69,8 @@
 .navbar * {
   color: var(--darkPink);
 }
-/* For the sidebar */
+
+/* Sidebar */
 .sidebar {
     height: 100%;
     width: 0;
@@ -105,3 +106,18 @@
    #content.open {
     margin-left: 250px;
    }
+
+/* Footer */
+
+.footer {
+  background-color: var(--medPink);
+}
+
+.footer * {
+  color: var(--lightMono);
+}
+
+#vertLine {
+  background-color: var(--lightMono);
+  width: 3px;
+}
