@@ -10,14 +10,13 @@ var palette = {};
 http.onreadystatechange = function() {
 	if(http.readyState == 4 && http.status == 200) {
 		palette = JSON.parse(http.responseText).result;
-    
+    console.log(palette);
 	}
 }
 
 http.open("POST", url, true);
 http.send(JSON.stringify(data));
 console.log(http)
-console.log(palette);
 
 // Weather API
 var locationName = document.querySelector('.weather-location');
@@ -59,7 +58,32 @@ var currentJacket=0;
 var currentPants=0;
 var currentShoes=0;
 
-// TODO: get user input for an image link and copy it into the array
+var linkButton = document.querySelector('#linkBtn');
 
-// TODO: create event handler to take input for certain things and push it into the proper array
+function addImage() {
+  var imageUrl = document.querySelector('#url-input').value;
+  if(imageUrl.trim() == '') {
+    return;
+  }
+  // pushes the url into the correct array and clears the input
+  if(document.getElementById('jackets').checked) {
+    jacketsImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
+    console.log('jackets', jacketsImages);
+  } else if(document.getElementById('shirts').checked) {
+    shirtsImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
+    console.log('shirts', shirtsImages);
+  } else if(document.getElementById('pants').checked) {
+    pantsImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
+    console.log('pants', pantsImages);
+  } else if(document.getElementById('shoes').checked) {
+    shoesImages.push(imageUrl.trim());
+    document.getElementById('url-input').value = '';
+    console.log('shoes', shoesImages);
+  }
 
+}
+
+linkButton.addEventListener('click', addImage);
