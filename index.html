@@ -89,6 +89,9 @@
                     Footwear
                   </label>
                 </div>
+                <div class="navbar-item">
+                  <button class="button">Add Item</button>
+                </div>
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
@@ -124,7 +127,36 @@
         <div class="clothing-recommendation" id="hot-or-cold"></div>
       </section>
     </main>
-    <aside></aside>
+    <!--Creating the side tab-->
+        <aside class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()">×</a>
+            <p class="menu-label">
+              Color Generator
+            </p>
+            <p>Pick a palette</p>
+            
+            </ul>
+            <p class="menu-label">
+             Click to generate by:
+            </p>
+            <ul class="menu-list">
+              <li><a>Clothing Item</a></li>
+              <li><a>Season</a></li>
+              <li><a>Random!</a></li>
+              </ul>
+              <p class="menu-color-palette">
+                Your palette:
+              </p>
+              <!--Add Colormind API-->
+              <a class="is-active">Powered by Colormind</a>
+              <div id="side-content">
+                <button class="side-openbtn" onclick="showSidebar()">☰</button>
+                <h2>Collapsed Sidebar</h2>
+                <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
+                More content here -->
+               </div>
+    </aside>
+    
     <script src="./assets/js/script.js"></script>
   </body>
   <!-- Bulma Footer -->
