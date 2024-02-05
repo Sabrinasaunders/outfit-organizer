@@ -48,6 +48,12 @@ const errorCallback = (error) => {
 // gets current location of client and calls the weather API if client allows access
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
+// create a function to populate the picture section
+function populateImages() {
+
+}
+
+
 // create an array for shirts, jackets, pants, and shoes
 var shirtsImages = [];
 var jacketsImages = [];
@@ -61,29 +67,30 @@ var currentShoes=0;
 var linkButton = document.querySelector('#linkBtn');
 
 function addImage() {
-  var imageUrl = document.querySelector('#url-input').value;
-  if(imageUrl.trim() == '') {
+  var imageUrl = document.querySelector('#url-input').value.trim();
+  if(imageUrl == '') {
     return;
   }
   // pushes the url into the correct array and clears the input
   if(document.getElementById('jackets').checked) {
-    jacketsImages.push(imageUrl.trim());
+    jacketsImages.push(imageUrl);
     document.getElementById('url-input').value = '';
     console.log('jackets', jacketsImages);
   } else if(document.getElementById('shirts').checked) {
-    shirtsImages.push(imageUrl.trim());
+    shirtsImages.push(imageUrl);
     document.getElementById('url-input').value = '';
     console.log('shirts', shirtsImages);
   } else if(document.getElementById('pants').checked) {
-    pantsImages.push(imageUrl.trim());
+    pantsImages.push(imageUrl);
     document.getElementById('url-input').value = '';
     console.log('pants', pantsImages);
   } else if(document.getElementById('shoes').checked) {
-    shoesImages.push(imageUrl.trim());
+    shoesImages.push(imageUrl);
     document.getElementById('url-input').value = '';
     console.log('shoes', shoesImages);
   }
-
+  populateImages();
 }
+
 
 linkButton.addEventListener('click', addImage);
