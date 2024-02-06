@@ -55,15 +55,14 @@
         class="section is-small"
         id="heroImg"
         title="Background photo of clothing and accessories">
-        <div id="weatherWidget" class="columns is-flex">
-          <div class="column card is-one-fifth">
+        <div id="weatherWidget" class="is-flex">
+          <div class="card">
             <div class="card-content">
               <div class="media">
-                <div class="media-left">
-                  <!-- add weather icon functionality -->
+                <div id="iconContainer" class="media-left">
                   <image class="weather-icon"></image>
                 </div>
-                <div class="media-content">
+                <div class="media-content mt-4">
                   <p class="title is-4"><span id="temperature-widget" class="weather-temperature"></span>&deg; F</p>
                   <p class="subtitle is-6"><span id="location-widget" class="weather-location"></span><br /><span id="temperature-widget" class="weather-description"></span></p>
                 </div>
@@ -143,7 +142,7 @@
             <a
               href="javascript:void(0)"
               class="closebtn"
-              onclick="hideSidebar()"</a>
+              onclick="hideSidebar()"></a>
     
             <p class="menu-label">
               <h2>Color Generator</h2>
