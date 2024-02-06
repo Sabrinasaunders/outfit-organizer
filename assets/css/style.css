@@ -69,7 +69,6 @@
 
 #weatherWidget {
   flex-direction: row-reverse;
-  flex-shrink: 0;
 }
 
 #weatherWidget .card {
@@ -79,6 +78,11 @@
 
 #weatherWidget * {
   color: var(--darkMono);
+}
+
+#iconContainer {
+  background-color: var(--medPink);
+  border-radius: 2.5rem;
 }
 
 /* Filter Bar */
@@ -151,6 +155,10 @@
 
 .tile.is-child {
   background-color: var(--lightPink) !important;
+}
+
+.tile.is-ancestor {
+  margin-top: 0;
 }
 
 .buttonContainer {
