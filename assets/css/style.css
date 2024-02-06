@@ -61,6 +61,22 @@
   pointer-events: none;
 }
 
+/* Weather Widget */
+
+#weatherWidget {
+  flex-direction: row-reverse;
+  flex-shrink: 0;
+}
+
+#weatherWidget .card {
+  border: solid 10px var(--medPink);
+  border-radius: 10px;
+}
+
+#weatherWidget * {
+  color: var(--darkMono);
+}
+
 /* Filter Bar */
 
 #filterBar {
