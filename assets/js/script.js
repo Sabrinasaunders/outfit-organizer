@@ -64,6 +64,7 @@ var topCurrent=0;
 var bottomCurrent=0;
 var shoeCurrent=0;
 
+var itemGallery = document.querySelector('#itemGallery');
 var linkButton = document.querySelector('#linkBtn');
 
 function populateImages() {
@@ -257,33 +258,106 @@ function populateImages() {
 
 function addImage() {
   var imageUrl = document.querySelector('#url-input').value;
+  var imageTitle = document.querySelector('#title-input').value;
   if(imageUrl.trim() == '') {
     return;
   }
   // pushes the url into the correct array and clears the input
   if(document.getElementById('hats').checked) {
     hatImages.push(imageUrl.trim());
+    hatTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
     hatCurrent++;
     console.log('hats', hatImages);
   } else if(document.getElementById('tops').checked) {
     topImages.push(imageUrl.trim());
+    topTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
     topCurrent++;
     console.log('tops', topImages);
   } else if(document.getElementById('bottoms').checked) {
     bottomImages.push(imageUrl.trim());
+    bottomTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
     bottomCurrent++;
     console.log('bottoms', bottomImages);
   } else if(document.getElementById('shoes').checked) {
     shoeImages.push(imageUrl.trim());
+    shoesTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
     shoeCurrent++;
     console.log('shoes', shoeImages);
   }
   populateImages();
 }
+
+itemGallery.addEventListener('click', function(event) {
+  var element = event.target;
+  if(element.matches('.button')) {
+    console.log(element.id);
+    switch(element.id) {
+      case 'hatRight':
+        if(hatCurrent == 0) {
+          hatCurrent = hatImages.length-1;
+        } else {
+          hatCurrent--;
+        }
+        break;
+      case 'hatLeft':
+        if(hatCurrent == hatImages.length-1) {
+          hatCurrent = 0;
+        } else {
+          hatCurrent++;
+        }
+        break;
+      case 'topRight':
+        if(topCurrent == 0) {
+          topCurrent = topImages.length-1;
+        } else {
+          topCurrent--;
+        }
+        break;
+      case 'topLeft':
+        if(topCurrent == topImages.length-1) {
+          topCurrent = 0;
+        } else {
+          topCurrent++;
+        }
+        break;
+      case 'botRight':
+        if(bottomCurrent == 0) {
+          bottomCurrent = bottomImages.length-1;
+        } else {
+          bottomCurrent--;
+        }
+        break;
+      case 'botLeft':
+        if(bottomCurrent == bottomImages.length-1) {
+          bottomCurrent = 0;
+        } else {
+          bottomCurrent++;
+        }
+        break;
+      case 'shoeRight':
+        if(shoeCurrent == 0) {
+          shoeCurrent = shoeImages.length-1;
+        } else {
+          shoeCurrent--;
+        }
+        break;
+      case 'shoeLeft':
+        if(shoeCurrent == shoeImages.length-1) {
+          shoeCurrent = 0;
+        } else {
+          shoeCurrent++;
+        }
+        break;
+    }
+    populateImages();
+  }
+});
+
+
 
 populateImages();
 linkButton.addEventListener('click', addImage);
