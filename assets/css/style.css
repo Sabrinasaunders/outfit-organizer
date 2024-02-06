@@ -111,7 +111,7 @@
 /* Item Gallery */
 
 #itemGallery {
-  outline: solid 5px red;
+  box-shadow: inset 0 0 10px var(--shadow);
 }
 
 /* Footer */
