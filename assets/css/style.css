@@ -36,8 +36,12 @@
   background-color: var(--lightPink);
 }
 
-.navbar-item {
+.navbar * {
   color: var(--darkPink);
+}
+
+.navbar-item {
+  color: var(--darkPink) !important;
 }
 
 .navbar-menu p {
@@ -83,8 +87,13 @@
   box-shadow: 0 -5px 10px var(--shadow);
 }
 
-.navbar * {
-  color: var(--darkPink);
+#filterBar a:hover {
+  color: var(--darkMono);
+}
+
+#linkBtn {
+  background-color: var(--medPink);
+  color: var(--lightMono);
 }
 
 /* Sidebar 
