@@ -108,6 +108,12 @@
   margin-left: 250px;
 }
 
+/* Item Gallery */
+
+#itemGallery {
+  outline: solid 5px red;
+}
+
 /* Footer */
 
 .footer {
