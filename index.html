@@ -56,6 +56,15 @@
         id="heroImg"
         title="Background photo of clothing and accessories"
       ></section>
+      <!-- Weather Widget -->
+      <section>
+        <div class="weather-location" id="location-widget"></div>
+        <!-- weather icon v -->
+        <i class="weather-icon"></i>
+        <div class="weather-temperature" id="temperature-widget"></div>
+        <div class="weather-description" id="temperature-widget"></div>
+        <div class="clothing-recommendation" id="hot-or-cold"></div>
+      </section>
       <!-- Upload/Filter Bar -->
       <section id="filterBar" class="navbar">
         <div class="navbar-menu">
@@ -67,31 +76,40 @@
                   <p>Drop an image link below to add it to your wardrobe!</p>
                 </div>
                 <input
-                  id = "url-input" 
+                  id="url-input"
                   class="navbar-item input is-rounded"
                   type="text"
                   placeholder="Paste link to image"
                 />
                 <div class="navbar-item">
                   <label class="radio">
-                    <input type="radio" id="jackets" name="answer" />
-                    Jacket
+                    <input type="radio" id="hats" name="answer" />
+                    Hats
                   </label>
                   <label class="radio">
-                    <input type="radio" id="shirts" name="answer" />
-                    Shirt
+                    <input type="radio" id="tops" name="answer" />
+                    Tops
                   </label>
                   <label class="radio">
-                    <input type="radio" id="pants" name="answer" />
-                    Bottom
+                    <input type="radio" id="bottoms" name="answer" />
+                    Bottoms
                   </label>
                   <label class="radio">
                     <input type="radio" id="shoes" name="answer" />
-                    Footwear
+                    Shoes
                   </label>
                 </div>
+                <input
+                  id="url-input"
+                  class="navbar-item input is-rounded"
+                  type="text"
+                  placeholder="Give this item a name"
+                />
+                <hr class="dropdown-divider" />
                 <div class="navbar-item">
-                  <button id="linkBtn" class="button">Add Item</button>
+                  <button id="linkBtn" class="button">
+                    Add Item to Wardrobe
+                  </button>
                 </div>
               </div>
             </div>
@@ -103,72 +121,98 @@
             </div>
           </div>
         </div>
-      </section>
-       <!--Creating the side tab-->
-       <div class="column is-gapless">
-       <aside class="column is-narrow">
-        <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()">×</a>
-            <p class="menu-label">
+      </section> 
+      <!-- Sidebar -->
+      <div class="column is-gapless">
+        <aside class="column is-narrow">
+          <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()">×</a>
+          <p class="menu-label">
               Color Generator
-            </p>
+          </p>
 
-            <p>Pick a palette</p>
-            
-            <p class="menu-label">
-             Click to generate by:
-            </p>
+          <p>Pick a palette</p>
 
-            <ul class="menu-list">
-              <li><a>Clothing Item</a></li>
-              <li><a>Season</a></li>
-              <li><a>Random!</a></li>
-              </ul>
+          <p class="menu-label">
+           Click to generate by:
+          </p>
 
-              <p class="menu-color-palette">
-                Your palette:
-              </p>
-
-              <!--Add Colormind API-->
-              <a class="is-active">Powered by Colormind</a>
-              <div id="side-content">
-                <button class="side-openbtn" onclick="showSidebar()">☰</button>
-                <h2>Collapsed Sidebar</h2>
-                <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
-                More content here -->
-               </div>
-    </aside>
-</div>
-      <!-- place holder code -->
-      <section class="clothing-item-shirt">
-        <h2>Shirt selection</h2>
-        <div class="shirt-container">Image</div>
-      </section>
-      <section class="clothing-item-jacket">
-        <h2>Jacket selection</h2>
-        <div class="jacket-container">Image</div>
-      </section>
-      <section class="clothing-item-pants">
-        <h2>Pant selection</h2>
-        <div class="pants-container">Image</div>
-      </section>
-      <section class="clothing-item-shoes">
-        <h2>Shoes selection</h2>
-        <div class="shoes-container">Image</div>
-      </section>
-      <!--place holder code-->
-
-      <section>
-        <div class="weather-location" id="location-widget"></div>
-        <!-- weather icon v -->
-        <i class="weather-icon"></i>
-
-        <div class="weather-temperature" id="temperature-widget"></div>
-        <div class="weather-description" id="temperature-widget"></div>
-        <div class="clothing-recommendation" id="hot-or-cold"></div>
-      </section>
+          <ul class="menu-list">
+            <li><a>Clothing Item</a></li>
+            <li><a>Season</a></li>
+            <li><a>Random!</a></li>
+          </ul>
+          <!--Add Colormind API-->
+          <a class="is-active">Powered by Colormind</a>
+          <div id="side-content">
+            <button class="side-openbtn" onclick="showSidebar()">☰</button>
+            <h2>Collapsed Sidebar</h2>
+            <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
+            More content here -->
+           </div>
+        </aside>
+      </div>
+      <!-- Clothing Item Gallery -->
+      <div id="itemGallery" class="container is-column">
+        <!-- Hats -->
+        <div id="hatGallery" class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-parent">
+              <article id="hat1" class="tile is-child box">
+                <p class="subtitle">Item Title 1</p>
+                <figure class="image is-4by3">
+                  <img src="https://placehold.co/600x400" />
+                </figure>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article id="hat2" class="tile is-child box">
+                <p class="subtitle">Item Title 2</p>
+                <figure class="image is-4by3">
+                  <img src="https://placehold.co/600x400" />
+                </figure>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article id="hat3" class="tile is-child box">
+                <p class="subtitle">Item Title 3</p>
+                <figure class="image is-4by3">
+                  <img src="https://placehold.co/600x400" />
+                </figure>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- Tops -->
+        <div id="topGallery" class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-parent">
+              <article id="top1" class="tile is-child box">
+                <p class="subtitle">Item Title 1</p>
+                <figure class="image is-4by3">
+                  <img src="https://placehold.co/600x400" />
+                </figure>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article id="top2" class="tile is-child box">
+                <p class="subtitle">Item Title 2</p>
+                <figure class="image is-4by3">
+                  <img src="https://placehold.co/600x400" />
+                </figure>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article id="top3" class="tile is-child box">
+                <p class="subtitle">Item Title 3</p>
+                <figure class="image is-4by3">
+                  <img src="https://placehold.co/600x400" />
+                </figure>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    
-    
   </body>
   <!-- Bulma Footer -->
   <footer class="footer level">
