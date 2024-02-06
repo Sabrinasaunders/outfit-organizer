@@ -1,34 +1,12 @@
-// Colormind variables
+// Colormind API
 var url = "http://colormind.io/api/";
 var data = {
 	model : "default",
 	input : [[44,43,44],[90,83,82],"N","N","N"]
 }
-var palette = {};
 var http = new XMLHttpRequest();
-// Weather variables
-var locationName = document.querySelector('.weather-location');
-var locationTemp = document.querySelector('.weather-temperature');
-var locationTempDescription = document.querySelector('.weather-description');
-var id;
-var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
-// 
-var shirtsImages = ['https://placehold.co/250'];
-var shirtsTitle = ['placeholder image'];
-var jacketsImages = ['https://placehold.co/250'];
-var jacketsTitle = ['placeholder image'];
-var pantsImages = ['https://placehold.co/250'];
-var pantsTitle = ['placeholder image'];\
-var shoesImages = ['https://placehold.co/250'];
-var shoesTitle = ['placeholder image'];
-var currentShirt=0;
-var currentJacket=0;
-var currentPants=0;
-var currentShoes=0;
-var linkButton = document.querySelector('#linkBtn');
+var palette = {};
 
-
-// Colormind API
 http.onreadystatechange = function() {
 	if(http.readyState == 4 && http.status == 200) {
 		palette = JSON.parse(http.responseText).result;
@@ -41,6 +19,13 @@ http.send(JSON.stringify(data));
 console.log(http)
 
 // Weather API
+var locationName = document.querySelector('.weather-location');
+var locationTemp = document.querySelector('.weather-temperature');
+var locationTempDescription = document.querySelector('.weather-description');
+
+var id;
+var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
+
 const successCallback = (position) => {
   fetch('https://api.openweathermap.org/data/2.5/weather?units=imperial&lat=' + position.coords.latitude +'&lon=' + position.coords.longitude +'&appid='+weatherAPIKey)
   .then(function(response) {
@@ -63,38 +48,42 @@ const errorCallback = (error) => {
 // gets current location of client and calls the weather API if client allows access
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
-// create a function to populate the picture section
-function populateImages() {
-  
-}
-
-
 // create an array for shirts, jackets, pants, and shoes
+var shirtsImages = [];
+var jacketsImages = [];
+var pantsImages = [];
+var shoesImages = [];
+var currentShirt=0;
+var currentJacket=0;
+var currentPants=0;
+var currentShoes=0;
+
+var linkButton = document.querySelector('#linkBtn');
+
 function addImage() {
-  var imageUrl = document.querySelector('#url-input').value.trim();
-  if(imageUrl == '') {
+  var imageUrl = document.querySelector('#url-input').value;
+  if(imageUrl.trim() == '') {
     return;
   }
   // pushes the url into the correct array and clears the input
   if(document.getElementById('jackets').checked) {
-    jacketsImages.push(imageUrl);
+    jacketsImages.push(imageUrl.trim());
     document.getElementById('url-input').value = '';
     console.log('jackets', jacketsImages);
   } else if(document.getElementById('shirts').checked) {
-    shirtsImages.push(imageUrl);
+    shirtsImages.push(imageUrl.trim());
     document.getElementById('url-input').value = '';
     console.log('shirts', shirtsImages);
   } else if(document.getElementById('pants').checked) {
-    pantsImages.push(imageUrl);
+    pantsImages.push(imageUrl.trim());
     document.getElementById('url-input').value = '';
     console.log('pants', pantsImages);
   } else if(document.getElementById('shoes').checked) {
-    shoesImages.push(imageUrl);
+    shoesImages.push(imageUrl.trim());
     document.getElementById('url-input').value = '';
     console.log('shoes', shoesImages);
   }
-  populateImages();
-}
 
+}
 
 linkButton.addEventListener('click', addImage);
