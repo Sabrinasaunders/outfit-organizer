@@ -6,7 +6,7 @@
   --darkPink: #964646;
   --darkMono: #000;
   --lightMono: #fff;
-  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 /* Universal Styles */
@@ -112,6 +112,25 @@
 
 #itemGallery {
   box-shadow: inset 0 0 10px var(--shadow);
+}
+
+#itemGallery * {
+  color: var(--darkPink);
+}
+
+#itemGallery button {
+  background-color: var(--medPink);
+  color: var(--lightMono);
+  box-shadow: 0 0.25em 0.5em rgba(10, 10, 10, 0.1);
+}
+
+.tile.is-child {
+  background-color: var(--lightPink) !important;
+}
+
+.buttonContainer {
+  width: auto !important;
+  align-items: center;
 }
 
 /* Footer */
