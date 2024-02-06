@@ -50,20 +50,33 @@
       </section>
     </header>
     <main>
-      <!-- Hero/Banner Image -->
+      <!-- Hero/Banner Image & Weather Widget -->
       <section
-        class="section is-medium"
+        class="section is-small"
         id="heroImg"
-        title="Background photo of clothing and accessories"
-      ></section>
-      <!-- Weather Widget -->
-      <section>
-        <div class="weather-location" id="location-widget"></div>
-        <!-- weather icon v -->
-        <i class="weather-icon"></i>
-        <div class="weather-temperature" id="temperature-widget"></div>
-        <div class="weather-description" id="temperature-widget"></div>
-        <div class="clothing-recommendation" id="hot-or-cold"></div>
+        title="Background photo of clothing and accessories">
+        <div id="weatherWidget" class="columns is-flex">
+          <div class="column card is-one-fifth">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <!-- add weather icon functionality -->
+                  <i class="weather-icon"></i>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4"><span id="temperature-widget" class="weather-temperature"></span>&deg; F</p>
+                  <p class="subtitle is-6"><span id="location-widget" class="weather-location"></span><br /><span id="temperature-widget" class="weather-description"></span></p>
+                </div>
+              </div>
+              <div class="content">
+                <div id="hot-or-cold" class="clothing-recommendation">
+                  <!-- remove placeholder text once js added -->
+                  <p>It's a little chilly today, don't forget your jacket!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- Upload/Filter Bar -->
       <section id="filterBar" class="navbar">
