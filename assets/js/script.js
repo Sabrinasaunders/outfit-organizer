@@ -50,7 +50,7 @@ navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 // create a function to populate the picture section
 function populateImages() {
-
+  
 }
 
 
