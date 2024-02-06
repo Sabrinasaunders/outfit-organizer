@@ -121,93 +121,155 @@
             </div>
           </div>
         </div>
-      </section> 
-      <!-- Sidebar -->
-      <div class="column is-gapless">
-        <aside class="column is-narrow">
-          <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()">×</a>
-          <p class="menu-label">
-              Color Generator
-          </p>
+      </section>
+      <!-- Sidebar/Item Gallery Container -->
+      <div class="columns">
+        <!-- Sidebar -->
+        <div class="column is-gapless is-one-fifth">
+          <aside class="column is-narrow">
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              onclick="hideSidebar()"
+              >×</a
+            >
+            <p class="menu-label">Color Generator</p>
 
-          <p>Pick a palette</p>
+            <p>Pick a palette</p>
 
-          <p class="menu-label">
-           Click to generate by:
-          </p>
+            <p class="menu-label">Click to generate by:</p>
 
-          <ul class="menu-list">
-            <li><a>Clothing Item</a></li>
-            <li><a>Season</a></li>
-            <li><a>Random!</a></li>
-          </ul>
-          <!--Add Colormind API-->
-          <a class="is-active">Powered by Colormind</a>
-          <div id="side-content">
-            <button class="side-openbtn" onclick="showSidebar()">☰</button>
-            <h2>Collapsed Sidebar</h2>
-            <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
-            More content here -->
-           </div>
-        </aside>
-      </div>
-      <!-- Clothing Item Gallery -->
-      <div id="itemGallery" class="container is-column">
-        <!-- Hats -->
-        <div id="hatGallery" class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-parent">
-              <article id="hat1" class="tile is-child box">
-                <p class="subtitle">Item Title 1</p>
-                <figure class="image is-4by3">
-                  <img src="https://placehold.co/600x400" />
-                </figure>
-              </article>
+            <ul class="menu-list">
+              <li><a>Clothing Item</a></li>
+              <li><a>Season</a></li>
+              <li><a>Random!</a></li>
+            </ul>
+            <!--Add Colormind API-->
+            <a class="is-active">Powered by Colormind</a>
+            <div id="side-content">
+              <button class="side-openbtn" onclick="showSidebar()">☰</button>
+              <h2>Collapsed Sidebar</h2>
+              <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
+              More content here -->
             </div>
+          </aside>
+        </div>
+        <!-- Clothing Item Gallery -->
+        <div id="itemGallery" class="column m-2">
+          <!-- Hats -->
+          <div id="hatGallery" class="tile is-ancestor">
             <div class="tile is-parent">
-              <article id="hat2" class="tile is-child box">
-                <p class="subtitle">Item Title 2</p>
-                <figure class="image is-4by3">
-                  <img src="https://placehold.co/600x400" />
-                </figure>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article id="hat3" class="tile is-child box">
-                <p class="subtitle">Item Title 3</p>
-                <figure class="image is-4by3">
-                  <img src="https://placehold.co/600x400" />
-                </figure>
-              </article>
+              <div class="tile is-parent">
+                <article id="hat1" class="tile is-child box">
+                  <p class="subtitle">Item Title 1</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="hat2" class="tile is-child box">
+                  <p class="subtitle">Item Title 2</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="hat3" class="tile is-child box">
+                  <p class="subtitle">Item Title 3</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Tops -->
-        <div id="topGallery" class="tile is-ancestor">
-          <div class="tile is-parent">
+          <!-- Tops -->
+          <div id="topGallery" class="tile is-ancestor">
             <div class="tile is-parent">
-              <article id="top1" class="tile is-child box">
-                <p class="subtitle">Item Title 1</p>
-                <figure class="image is-4by3">
-                  <img src="https://placehold.co/600x400" />
-                </figure>
-              </article>
+              <div class="tile is-parent">
+                <article id="top1" class="tile is-child box">
+                  <p class="subtitle">Item Title 1</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="top2" class="tile is-child box">
+                  <p class="subtitle">Item Title 2</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="top3" class="tile is-child box">
+                  <p class="subtitle">Item Title 3</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
             </div>
+          </div>
+          <!-- Bottoms -->
+          <div id="botGallery" class="tile is-ancestor">
             <div class="tile is-parent">
-              <article id="top2" class="tile is-child box">
-                <p class="subtitle">Item Title 2</p>
-                <figure class="image is-4by3">
-                  <img src="https://placehold.co/600x400" />
-                </figure>
-              </article>
+              <div class="tile is-parent">
+                <article id="bottom1" class="tile is-child box">
+                  <p class="subtitle">Item Title 1</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="bottom2" class="tile is-child box">
+                  <p class="subtitle">Item Title 2</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="bottom3" class="tile is-child box">
+                  <p class="subtitle">Item Title 3</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
             </div>
+          </div>
+          <!-- Shoes -->
+          <div id="shoeGallery" class="tile is-ancestor">
             <div class="tile is-parent">
-              <article id="top3" class="tile is-child box">
-                <p class="subtitle">Item Title 3</p>
-                <figure class="image is-4by3">
-                  <img src="https://placehold.co/600x400" />
-                </figure>
-              </article>
+              <div class="tile is-parent">
+                <article id="shoe1" class="tile is-child box">
+                  <p class="subtitle">Item Title 1</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="shoe2" class="tile is-child box">
+                  <p class="subtitle">Item Title 2</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="shoe3" class="tile is-child box">
+                  <p class="subtitle">Item Title 3</p>
+                  <figure class="image is-4by3">
+                    <img src="https://placehold.co/600x400" />
+                  </figure>
+                </article>
+              </div>
             </div>
           </div>
         </div>
