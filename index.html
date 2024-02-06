@@ -56,6 +56,15 @@
         id="heroImg"
         title="Background photo of clothing and accessories"
       ></section>
+      <!-- Weather Widget -->
+      <section>
+        <div class="weather-location" id="location-widget"></div>
+        <!-- weather icon v -->
+        <i class="weather-icon"></i>
+        <div class="weather-temperature" id="temperature-widget"></div>
+        <div class="weather-description" id="temperature-widget"></div>
+        <div class="clothing-recommendation" id="hot-or-cold"></div>
+      </section>
       <!-- Upload/Filter Bar -->
       <section id="filterBar" class="navbar">
         <div class="navbar-menu">
@@ -114,19 +123,28 @@
         </div>
       </section>
       <!-- Sidebar -->
-      <aside class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()"
-          >×</a
-        >
-        <p class="menu-label">Color Generator</p>
+      <aside class="column is-narrow" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="hideSidebar()">×</a>
+        <p class="menu-label">
+          Color Generator
+        </p>
+
         <p>Pick a palette</p>
-        <p class="menu-label">Click to generate by:</p>
+
+        <p class="menu-label">
+         Click to generate by:
+        </p>
+
         <ul class="menu-list">
           <li><a>Clothing Item</a></li>
           <li><a>Season</a></li>
           <li><a>Random!</a></li>
         </ul>
-        <p class="menu-color-palette">Your palette:</p>
+
+        <p class="menu-color-palette">
+          Your palette:
+        </p>
+
         <!--Add Colormind API-->
         <a class="is-active">Powered by Colormind</a>
         <div id="side-content">
@@ -197,15 +215,7 @@
           </div>
         </div>
       </div>
-
-      <section>
-        <div class="weather-location" id="location-widget"></div>
-        <div class="weather-temperature" id="temperature-widget"></div>
-        <div class="weather-description" id="temperature-widget"></div>
-        <div class="clothing-recommendation" id="hot-or-cold"></div>
-      </section>
     </main>
-    <script src="./assets/js/script.js"></script>
   </body>
   <!-- Bulma Footer -->
   <footer class="footer level">
@@ -266,4 +276,5 @@
       </div>
     </div>
   </footer>
+  <script src="./assets/js/script.js"></script>
 </html>
