@@ -22,6 +22,7 @@ console.log(http)
 var locationName = document.querySelector('.weather-location');
 var locationTemp = document.querySelector('.weather-temperature');
 var locationTempDescription = document.querySelector('.weather-description');
+var locationIcon = document.querySelector('.weather-icon');
 
 var id;
 var weatherAPIKey = '88545649ed086e2c55e61d30884046e5';
@@ -38,6 +39,7 @@ const successCallback = (position) => {
     locationTemp.textContent = Math.round(data.main.temp) + '';
     console.log('weather conditions: ', data.weather[0].description);
     locationTempDescription.textContent = data.weather[0].description;
+    locationIcon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
   });
 };
 
