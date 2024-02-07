@@ -266,6 +266,7 @@ function addImage() {
   if(document.getElementById('hats').checked) {
     hatImages.push(imageUrl.trim());
     hatTitles.push(imageTitle);
+    document.getElementById('title-input').value = '';
     document.getElementById('url-input').value = '';
     hatCurrent++;
     console.log('hats', hatImages);
@@ -296,56 +297,56 @@ itemGallery.addEventListener('click', function(event) {
   if(element.matches('.button')) {
     console.log(element.id);
     switch(element.id) {
-      case 'hatRight':
+      case 'hatLeft':
         if(hatCurrent == 0) {
           hatCurrent = hatImages.length-1;
         } else {
           hatCurrent--;
         }
         break;
-      case 'hatLeft':
+      case 'hatRight':
         if(hatCurrent == hatImages.length-1) {
           hatCurrent = 0;
         } else {
           hatCurrent++;
         }
         break;
-      case 'topRight':
+      case 'topLeft':
         if(topCurrent == 0) {
           topCurrent = topImages.length-1;
         } else {
           topCurrent--;
         }
         break;
-      case 'topLeft':
+      case 'topRight':
         if(topCurrent == topImages.length-1) {
           topCurrent = 0;
         } else {
           topCurrent++;
         }
         break;
-      case 'botRight':
+      case 'botLeft':
         if(bottomCurrent == 0) {
           bottomCurrent = bottomImages.length-1;
         } else {
           bottomCurrent--;
         }
         break;
-      case 'botLeft':
+      case 'botRight':
         if(bottomCurrent == bottomImages.length-1) {
           bottomCurrent = 0;
         } else {
           bottomCurrent++;
         }
         break;
-      case 'shoeRight':
+      case 'shoeLeft':
         if(shoeCurrent == 0) {
           shoeCurrent = shoeImages.length-1;
         } else {
           shoeCurrent--;
         }
         break;
-      case 'shoeLeft':
+      case 'shoeRight':
         if(shoeCurrent == shoeImages.length-1) {
           shoeCurrent = 0;
         } else {
