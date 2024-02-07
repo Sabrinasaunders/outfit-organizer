@@ -48,6 +48,11 @@
   pointer-events: none;
 }
 
+.js-modal-trigger {
+  background-color: var(--lightPink) !important;
+  border: none;
+}
+
 #subHeader {
   background-color: var(--medPink);
   padding: 0.2rem;
