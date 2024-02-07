@@ -2,7 +2,7 @@
 var url = "http://colormind.io/api/";
 var data = {
 	model : "default",
-	input : [[44,43,44],[90,83,82],"N","N","N"]
+	input : [[245,217,217],[232, 198, 198],"N","N","N"]
 }
 var http = new XMLHttpRequest();
 var palette = {};
