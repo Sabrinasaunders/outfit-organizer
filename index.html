@@ -37,7 +37,9 @@
         </div>
         <div class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item has-text-black" href="#wardrobe"> Wardrobe </a>
+            <a class="navbar-item has-text-black" href="#wardrobe">
+              Wardrobe
+            </a>
             <p class="navbar-item">|</p>
             <a class="navbar-item has-text-black" href="#about"> About </a>
             <p class="navbar-item">|</p>
@@ -54,7 +56,8 @@
       <section
         class="section is-small"
         id="heroImg"
-        title="Background photo of clothing and accessories">
+        title="Background photo of clothing and accessories"
+      >
         <div id="weatherWidget" class="is-flex">
           <div class="card">
             <div class="card-content">
@@ -63,8 +66,20 @@
                   <image class="weather-icon"></image>
                 </div>
                 <div class="media-content mt-4">
-                  <p class="title is-4"><span id="temperature-widget" class="weather-temperature"></span>&deg; F</p>
-                  <p class="subtitle is-6"><span id="location-widget" class="weather-location"></span><br /><span id="temperature-widget" class="weather-description"></span></p>
+                  <p class="title is-4">
+                    <span
+                      id="temperature-widget"
+                      class="weather-temperature"
+                    ></span
+                    >&deg; F
+                  </p>
+                  <p class="subtitle is-6">
+                    <span id="location-widget" class="weather-location"></span
+                    ><br /><span
+                      id="temperature-widget"
+                      class="weather-description"
+                    ></span>
+                  </p>
                 </div>
               </div>
               <div class="content">
@@ -82,10 +97,20 @@
         <div class="navbar-menu">
           <div class="navbar-end">
             <div class="navbar-item is-hoverable">
-              <button class="navbar-link js-modal-trigger is-hoverable is-arrowless" data-target="modal-js-input"> &#10010; Add wardrobe items </button>
+              <button
+                class="navbar-link js-modal-trigger is-hoverable is-arrowless"
+                data-target="modal-js-input"
+              >
+                &#10010; Add wardrobe items
+              </button>
             </div>
             <div class="navbar-item is-hoverable">
-              <button class="navbar-link js-modal-trigger is-hoverable is-arrowless" data-target="modal-js-sort"> ☰ Sort wardrobe items </button>
+              <button
+                class="navbar-link js-modal-trigger is-hoverable is-arrowless"
+                data-target="modal-js-sort"
+              >
+                ☰ Sort wardrobe items
+              </button>
             </div>
           </div>
         </div>
@@ -93,33 +118,43 @@
       <!-- Sidebar/Item Gallery Container -->
       <div class="columns mb-0">
         <!-- Sidebar -->
-        <div class="column is-gapless is-one-fifth">
-          <aside class="column menu is-narrow">
-            <a
-              href="javascript:void(0)"
-              class="closebtn"
-              onclick="hideSidebar()"></a>
-    
-            <p class="menu-label">
-              <h2>Color Generator</h2>
-              <h3>Pick a palette!</h3>
-            </p>
-
-            <p class="menu-label">Click to generate by:</p>
+        <div id="sidebarContainer" class="column is-gapless is-one-quarter">
+          <aside class="menu">
+            <p class="menu-label">Color Generator</p>
+            <p>Pick a palette!</p>
+          </aside>
+          <aside class="menu">
+            <p class="menu-label">Generate Palette by:</p>
             <ul class="menu-list">
-              <li><a>Clothing Item</a></li>
-              <li><a>Season</a></li>
-              <li><a>Random!</a></li>
+              <li><button class="button">Clothing Item</button></li>
+              <li><button class="button">Season</button></li>
+              <li><button class="button">Random!</button></li>
             </ul>
-            <!--Add Colormind API-->
-            <a class="is-active">Powered by Colormind</a>
+            <p class="menu-label">Your Palette:</p>
+            <div id="paletteContainer" class="box">
+              <ul id="palette" class="menu-list">
+                <li><div id="swatch1" class="box"></div></li>
+                <li><div id="swatch2" class="box"></div></li>
+                <li><div id="swatch3" class="box"></div></li>
+                <li><div id="swatch4" class="box"></div></li>
+              </ul>
+            </div>
+            <a href="http://colormind.io/">Powered by Colormind</a>
             <div id="side-content">
-              <button class="side-openbtn" onclick="showSidebar()">☰</button>
+              <!-- <button class="side-openbtn" onclick="showSidebar()">☰</button> -->
               <!--<h2>Collapsed Sidebar</h2>-->
               <!--<p>Click on the menu/bar icon to open the sidebar, and it will automatically push this content to the right.</p>
               More content here -->
             </div>
           </aside>
+          <div class="container">
+            <a
+              href="javascript:void(0)"
+              onclick="hideSidebar()"
+              class="closebtn"
+              >&#9204;Hide Sidebar</a
+            >
+          </div>
         </div>
         <!-- Clothing Item Gallery -->
         <div id="itemGallery" class="column">
@@ -128,7 +163,7 @@
             <div class="tile is-parent">
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="hatLeft" class="button is-medium is-child">
-                  &#11207;
+                  &#9204;
                 </button>
               </div>
               <div class="tile is-parent">
@@ -157,7 +192,7 @@
               </div>
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="hatRight" class="button is-medium is-child">
-                  &#11208;
+                  &#9205;
                 </button>
               </div>
             </div>
@@ -167,7 +202,7 @@
             <div class="tile is-parent">
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="topLeft" class="button is-medium is-child">
-                  &#11207;
+                  &#9204;
                 </button>
               </div>
               <div class="tile is-parent">
@@ -196,7 +231,7 @@
               </div>
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="topRight" class="button is-medium is-child">
-                  &#11208;
+                  &#9205;
                 </button>
               </div>
             </div>
@@ -206,7 +241,7 @@
             <div class="tile is-parent">
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="botLeft" class="button is-medium is-child">
-                  &#11207;
+                  &#9204;
                 </button>
               </div>
               <div class="tile is-parent">
@@ -235,7 +270,7 @@
               </div>
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="botRight" class="button is-medium is-child">
-                  &#11208;
+                  &#9205;
                 </button>
               </div>
             </div>
@@ -245,7 +280,7 @@
             <div class="tile is-parent">
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="shoeLeft" class="button is-medium is-child">
-                  &#11207;
+                  &#9204;
                 </button>
               </div>
               <div class="tile is-parent">
@@ -274,7 +309,7 @@
               </div>
               <div class="buttonContainer tile is-parent is-1 is-flex">
                 <button id="shoeRight" class="button is-medium is-child">
-                  &#11208;
+                  &#9205;
                 </button>
               </div>
             </div>
@@ -291,8 +326,10 @@
           <p style="font-weight: bold">Project created Jan - Feb 2024 by</p>
           <p>
             <span><a href="https://github.com/AaronH-o">Aaron H.</a></span> |
-            <span><a href="https://github.com/Aoliva96">Aster O.</a></span> | 
-            <span><a href="https://github.com/Sabrinasaunders">Sabrina S.</a></span>
+            <span><a href="https://github.com/Aoliva96">Aster O.</a></span> |
+            <span
+              ><a href="https://github.com/Sabrinasaunders">Sabrina S.</a></span
+            >
           </p>
         </div>
       </div>
@@ -348,14 +385,14 @@
         </div>
         <div class="message-body">
           <p>This window will be used to sort your wardrobe items by:</p>
-          <br>
+          <br />
           <ul>
             <li>Image Color</li>
             <li>Clothing Type</li>
             <li>Season</li>
             <li>Etc.</li>
           </ul>
-          <br>
+          <br />
           <p>Feature coming soon!</p>
         </div>
       </article>
@@ -373,7 +410,9 @@
           <p>Drop an image link below to add it to your wardrobe!</p>
         </div>
         <div class="navbar-item">
-          <p style="font-style: bold;">**Please crop images to 1x1 aspect ratio first, fix on the way!**</p>
+          <p style="font-style: bold">
+            **Please crop images to 1x1 aspect ratio first, fix on the way!**
+          </p>
         </div>
         <input
           id="url-input"
@@ -407,9 +446,7 @@
         />
         <hr class="dropdown-divider" />
         <div class="navbar-item">
-          <button id="linkBtn" class="button">
-            Add Item to Wardrobe
-          </button>
+          <button id="linkBtn" class="button">Add Item to Wardrobe</button>
         </div>
       </div>
     </div>
