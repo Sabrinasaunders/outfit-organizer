@@ -200,6 +200,10 @@
 
 /* Modals */
 
+.modal * {
+  color: var(--darkMono);
+}
+
 .message-header {
   background-color: var(--medPink);
 }
@@ -211,4 +215,16 @@
 .message-body li {
   list-style: circle;
   margin-left: 2rem;
+}
+
+#linkBtn {
+  background-color: var(--medPink);
+  color: var(--darkPink);
+  margin-left: 0;
+}
+
+#linkBtn:hover {
+  background-color: var(--lightPink);
+  border-color: var(--darkPink);
+  color: var(--darkMono);
 }
