@@ -13,8 +13,7 @@
 
 * {
   font-family: "Josefin Sans", "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: light;
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif !important;
   color: var(--darkPink);
 }
 
@@ -38,6 +37,7 @@
 
 .navbar * {
   color: var(--darkPink);
+  font-size: 16px;
 }
 
 .navbar-item {
@@ -46,11 +46,6 @@
 
 .navbar-menu p {
   pointer-events: none;
-}
-
-.js-modal-trigger {
-  background-color: var(--lightPink) !important;
-  border: none;
 }
 
 #subHeader {
@@ -103,6 +98,23 @@
 #linkBtn {
   background-color: var(--medPink);
   color: var(--lightMono);
+}
+
+.js-modal-trigger {
+  background-color: var(--lightPink) !important;
+  border: none;
+  border-radius: 1.5rem;
+  margin: 0;
+}
+
+.js-modal-trigger:hover {
+  background-color: var(--lightMono) !important;
+  color: var(--darkMono);
+  outline: solid 1px var(--lightPink);
+}
+
+.sortIcon {
+  font-weight: bolder;
 }
 
 /* Sidebar 
