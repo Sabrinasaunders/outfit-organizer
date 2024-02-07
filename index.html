@@ -82,7 +82,8 @@
         <div class="navbar-menu">
           <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-arrowless">&#10010; Add wardrobe items </a>
+              <button class="js-modal-trigger is-hoverable" data-target="modal-js-input">&#10010; Add wardrobe items </button>
+              <!-- <a class="navbar-link is-arrowless">&#10010; Add wardrobe items </a>
               <div class="navbar-dropdown is-right">
                 <div class="navbar-item">
                   <p>Drop an image link below to add it to your wardrobe!</p>
@@ -123,7 +124,7 @@
                     Add Item to Wardrobe
                   </button>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link is-arrowless"> &#9207; Sort wardrobe options </a>
@@ -381,5 +382,57 @@
       </div>
     </div>
   </footer>
+
+  <!-- modal -->
+  <div id="modal-js-input" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div class="navbar-item">
+          <p>Drop an image link below to add it to your wardrobe!</p>
+        </div>
+        <input
+          id="url-input"
+          class="navbar-item input is-rounded"
+          type="text"
+          placeholder="Paste link to image"
+        />
+        <div class="navbar-item">
+          <label class="radio">
+            <input type="radio" id="hats" name="answer" />
+            Hats
+          </label>
+          <label class="radio">
+            <input type="radio" id="tops" name="answer" />
+            Tops
+          </label>
+          <label class="radio">
+            <input type="radio" id="bottoms" name="answer" />
+            Bottoms
+          </label>
+          <label class="radio">
+            <input type="radio" id="shoes" name="answer" />
+            Shoes
+          </label>
+        </div>
+        <input
+          id="title-input"
+          class="navbar-item input is-rounded"
+          type="text"
+          placeholder="Give this item a name"
+        />
+        <hr class="dropdown-divider" />
+        <div class="navbar-item">
+          <button id="linkBtn" class="button">
+            Add Item to Wardrobe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
   <script src="./assets/js/script.js"></script>
 </html>

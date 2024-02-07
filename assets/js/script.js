@@ -357,10 +357,9 @@ itemGallery.addEventListener('click', function(event) {
   }
 });
 
-
-
 populateImages();
 linkButton.addEventListener('click', addImage);
+
 
 // Bulma Modal
 document.addEventListener('DOMContentLoaded', () => {
@@ -396,12 +395,5 @@ document.addEventListener('DOMContentLoaded', () => {
     $close.addEventListener('click', () => {
       closeModal($target);
     });
-  });
-
-  // Add a keyboard event to close all modals
-  document.addEventListener('keydown', (event) => {
-    if(e.key === "Escape") {
-      closeAllModals();
-    }
   });
 });
