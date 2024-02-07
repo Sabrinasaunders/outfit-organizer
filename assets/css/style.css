@@ -20,7 +20,7 @@
 * h1 {
   font-family: "Josefin Slab", "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px !important;
 }
 
 * h2 {
@@ -95,9 +95,8 @@
   color: var(--darkMono);
 }
 
-#linkBtn {
-  background-color: var(--medPink);
-  color: var(--lightMono);
+#filterBar button {
+  margin-right: 2.1rem;
 }
 
 .js-modal-trigger {
@@ -117,8 +116,8 @@
   font-weight: bolder;
 }
 
-/* Sidebar 
-.sidebar {
+/* Sidebar */
+/* .sidebar {
   height: 100%;
   width: 0;
   position: fixed;
@@ -143,7 +142,7 @@
 #content {
   transition: margin-left 0.5s;
   padding: 16px;
-}
+} */
 
 /* When the sidebar is open, make it visible and move the main content to the right */
 .sidebar.open {
