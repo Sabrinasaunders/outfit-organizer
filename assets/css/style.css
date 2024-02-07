@@ -198,3 +198,18 @@
   background-color: var(--lightMono);
   width: 3px;
 }
+
+/* Modals */
+
+.message-header {
+  background-color: var(--medPink);
+}
+
+.message-header * {
+  color: var(--lightMono);
+}
+
+.message-body li {
+  list-style: circle;
+  margin-left: 2rem;
+}
