@@ -37,14 +37,16 @@ We rectified the above problems in the following way:
 
 - As a group, we delegated tasks based on our individual strengths as developers.
 - Sabrina was assigned the task of building the HTML and linking Bulma to the project.
-- Aaron was handled the backend JavaScript development and integration to the frontend.
-- Aster designed and mocked-up the projects UI, working primarily with CSS & HTML to build the project frontend with Bulma.
-- Some features were unable to be completed due to time constraints and life events, features that were temporarily shelved to prioritized MVP completion include:
-  - A collapsible sidebar
-  - Filtering wardrobe items
-  - Adding separate pages for navigation items
-  - Full Colormind integration to the sidebar buttons
-  - A method of cropping user images to keep image dimensions from affecting the layout
+- Aaron was assigned the backend JavaScript development and integration to the frontend.
+- Aster designed and mocked-up the project's UI, working primarily with CSS & HTML to build the project frontend with Bulma.
+
+-Some features were unable to be completed due to time constraints and life events, features that were temporarily shelved to prioritized MVP completion include:
+
+- A collapsible sidebar
+- Filtering wardrobe items
+- Adding separate pages for navigation items
+- Full Colormind integration to the sidebar buttons
+- A method of cropping user images to keep image dimensions from affecting the layout
 
 See below for a screenshot of the project.
 
