@@ -29,6 +29,13 @@ function changeColor() {
   console.log(http) 
 }
 
+// initial call
+changeColor();
+
+// event handler for random
+var randButton = document.getElementById('palette-random');
+randButton.addEventListener('click', changeColor);
+
 
 // Weather API
 var locationName = document.querySelector('.weather-location');
@@ -371,13 +378,6 @@ itemGallery.addEventListener('click', function(event) {
 
 populateImages();
 linkButton.addEventListener('click', addImage);
-// initial call
-changeColor();
-
-// event handler for random
-var randButton = document.getElementById('palette-random');
-randButton.addEventListener('click', changeColor);
-
 
 // Bulma Modal
 document.addEventListener('DOMContentLoaded', () => {
