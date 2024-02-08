@@ -70,14 +70,14 @@ const errorCallback = (error) => {
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 // create an array for shirts, Tops, pants, and shoes
-var hatImages = ['https://placehold.co/600x500'];
-var topImages = ['https://placehold.co/600x500'];
-var bottomImages = ['https://placehold.co/600x500'];
-var shoeImages = ['https://placehold.co/600x500'];
-var hatTitles = ['hat image'];
-var topTitles = ['top image'];
-var bottomTitles = ['bottom image'];
-var shoeTitles = ['shoe image'];
+var hatImages = ['https://i.imgur.com/GNNYy5A.png','https://i.imgur.com/NvbevUb.png','https://i.imgur.com/nDrEUOk.png'];
+var topImages = ['https://i.imgur.com/tZup5a7.png','https://i.imgur.com/YS53X6Z.png', 'https://i.imgur.com/Qkzgvnd.png'];
+var bottomImages = ['https://i.imgur.com/KaLeqm8.png','https://i.imgur.com/OVBwjGu.png','https://i.imgur.com/KobQNY3.png'];
+var shoeImages = ['https://i.imgur.com/nRywus8.png','https://i.imgur.com/LmivEAV.png','https://i.imgur.com/anJcbFN.png'];
+var hatTitles = ['tan hat', 'black hat', 'white hat'];
+var topTitles = ['leather jacket', 'yellow hoodie', 'tan jacket'];
+var bottomTitles = ['blue pants', 'jeans', 'beige pants'];
+var shoeTitles = ['knit sneakers', 'yellow docs', 'white sneakers'];
 var hatCurrent=0;
 var topCurrent=0;
 var bottomCurrent=0;
