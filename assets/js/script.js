@@ -4,27 +4,31 @@ var data = {
 	model : "default",
 	input : ["N","N","N","N","N"]
 }
-var http = new XMLHttpRequest();
-var palette = {};
-var paletteEl1 = document.getElementById('swatch1');
-var paletteEl2 = document.getElementById('swatch2');
-var paletteEl3 = document.getElementById('swatch3');
-var paletteEl4 = document.getElementById('swatch4');
 
-http.onreadystatechange = function() {
-	if(http.readyState == 4 && http.status == 200) {
-		palette = JSON.parse(http.responseText).result;
-    console.log(palette);
-    paletteEl1.style.backgroundColor = 'rgb('+palette['0'][0]+','+palette['0'][1]+','+palette['0'][2]+')';
-    paletteEl2.style.backgroundColor = 'rgb('+palette['1'][0]+','+palette['1'][1]+','+palette['1'][2]+')';
-    paletteEl3.style.backgroundColor = 'rgb('+palette['2'][0]+','+palette['2'][1]+','+palette['2'][2]+')';
-    paletteEl4.style.backgroundColor = 'rgb('+palette['3'][0]+','+palette['3'][1]+','+palette['3'][2]+')';
-	}
+function changeColor() {
+  var http = new XMLHttpRequest();
+  var palette = {};
+  var paletteEl1 = document.getElementById('swatch1');
+  var paletteEl2 = document.getElementById('swatch2');
+  var paletteEl3 = document.getElementById('swatch3');
+  var paletteEl4 = document.getElementById('swatch4');
+
+  http.onreadystatechange = function() {
+    if(http.readyState == 4 && http.status == 200) {
+      palette = JSON.parse(http.responseText).result;
+      console.log(palette);
+      paletteEl1.style.backgroundColor = 'rgb('+palette['0'][0]+','+palette['0'][1]+','+palette['0'][2]+')';
+      paletteEl2.style.backgroundColor = 'rgb('+palette['1'][0]+','+palette['1'][1]+','+palette['1'][2]+')';
+      paletteEl3.style.backgroundColor = 'rgb('+palette['2'][0]+','+palette['2'][1]+','+palette['2'][2]+')';
+      paletteEl4.style.backgroundColor = 'rgb('+palette['3'][0]+','+palette['3'][1]+','+palette['3'][2]+')';
+    }
+  }
+
+  http.open("POST", url, true);
+  http.send(JSON.stringify(data));
+  console.log(http) 
 }
 
-http.open("POST", url, true);
-http.send(JSON.stringify(data));
-console.log(http)
 
 // Weather API
 var locationName = document.querySelector('.weather-location');
@@ -367,6 +371,12 @@ itemGallery.addEventListener('click', function(event) {
 
 populateImages();
 linkButton.addEventListener('click', addImage);
+// initial call
+changeColor();
+
+// event handler for random
+var randButton = document.getElementById('palette-random');
+randButton.addEventListener('click', changeColor);
 
 
 // Bulma Modal
