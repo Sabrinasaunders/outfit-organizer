@@ -302,7 +302,7 @@ function addImage() {
     console.log('bottoms', bottomImages);
   } else if(document.getElementById('shoes').checked) {
     shoeImages.push(imageUrl.trim());
-    shoesTitles.push(imageTitle);
+    shoeTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
     shoeCurrent = shoeCurrent.length-1;
     console.log('shoes', shoeImages);
