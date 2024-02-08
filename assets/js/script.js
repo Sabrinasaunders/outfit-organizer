@@ -298,13 +298,13 @@ function addImage() {
     bottomImages.push(imageUrl.trim());
     bottomTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
-    bottomCurrent = bottomCurrent.length-1;
+    bottomCurrent = bottomImages.length-1;
     console.log('bottoms', bottomImages);
   } else if(document.getElementById('shoes').checked) {
     shoeImages.push(imageUrl.trim());
     shoeTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
-    shoeCurrent = shoeCurrent.length-1;
+    shoeCurrent = shoeImages.length-1;
     console.log('shoes', shoeImages);
   }
   populateImages();
