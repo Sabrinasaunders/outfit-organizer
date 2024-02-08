@@ -33,11 +33,18 @@ See below for a mockup designed by Aster Oliva in Figma
 
 ## Solution
 
-I rectified the above problems in the following way:
+We rectified the above problems in the following way:
 
-- ( list actions taken to solve above problem. )
--
--
+- As a group, we delegated tasks based on our individual strengths as developers.
+- Sabrina was assigned the task of building the HTML and linking Bulma to the project.
+- Aaron was handled the backend JavaScript development and integration to the frontend.
+- Aster designed and mocked-up the projects UI, working primarily with CSS & HTML to build the project frontend with Bulma.
+- Some features were unable to be completed due to time constraints and life events, features that were temporarily shelved to prioritized MVP completion include:
+  - A collapsible sidebar
+  - Filtering wardrobe items
+  - Adding separate pages for navigation items
+  - Full Colormind integration to the sidebar buttons
+  - A method of cropping user images to keep image dimensions from affecting the layout
 
 See below for a screenshot of the project.
 
@@ -51,7 +58,7 @@ See below for a screenshot of the project.
 
 ## Collaborators
 
-This project was a collaboration between Aaron Ho, Aster Oliva, Sabrina Saunders and Elizabeth Lu.
+This project was a collaboration between Aaron Ho, Aster Oliva, and Sabrina Saunders.
 
 ## Resources
 
