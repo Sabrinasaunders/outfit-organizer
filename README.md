@@ -56,6 +56,10 @@ See below for a screenshot of the project.
 
 [Link to the deployed project on GitPages](https://Sabrinasaunders.github.io/outfit-organizer)
 
+## Disclaimer
+
+To access the palette generator, you will need to run the project on a local server or allow insecure content on your site settings. This is due to the fact that the Colormind API does not support HTTPS requests.
+
 ## Collaborators
 
 This project was a collaboration between Aaron Ho, Aster Oliva, and Sabrina Saunders.

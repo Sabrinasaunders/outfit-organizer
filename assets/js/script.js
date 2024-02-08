@@ -305,7 +305,8 @@ function addImage() {
     shoeTitles.push(imageTitle);
     document.getElementById('url-input').value = '';
     shoeCurrent = shoeImages.length-1;
-    console.log('shoes', shoeImages);
+    console.log('shoe image', shoeImages);
+    console.log('shoe title', shoeTitles);
   }
   populateImages();
 }
